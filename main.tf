@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.chaos_studio_targets : {
       for k2, v2 in coalesce(v1.chaos_studio_capabilities, {}) :
       "${k1}/${k2}" => merge(v2, {
-        chaos_studio_target_id = module.chaos_studio_targets.chaos_studio_targets["${k1}"].id
+        chaos_studio_target_id = module.chaos_studio_targets.chaos_studio_targets_id["${k1}"]
       })
     }
   ]...)
