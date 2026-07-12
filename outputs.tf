@@ -1,4 +1,9 @@
 # --- azurerm_chaos_studio_target ---
+output "chaos_studio_targets_id" {
+  description = "Map of id values across all chaos_studio_targets, keyed the same as var.chaos_studio_targets"
+  value       = module.chaos_studio_targets.chaos_studio_targets_id
+}
+
 output "chaos_studio_targets_location" {
   description = "Map of location values across all chaos_studio_targets, keyed the same as var.chaos_studio_targets"
   value       = module.chaos_studio_targets.chaos_studio_targets_location
@@ -15,6 +20,11 @@ output "chaos_studio_targets_target_type" {
 }
 
 # --- azurerm_chaos_studio_capability ---
+output "chaos_studio_capabilities_id" {
+  description = "Map of id values across all chaos_studio_capabilities, keyed the same as var.chaos_studio_capabilities"
+  value       = module.chaos_studio_capabilities.chaos_studio_capabilities_id
+}
+
 output "chaos_studio_capabilities_capability_type" {
   description = "Map of capability_type values across all chaos_studio_capabilities, keyed the same as var.chaos_studio_capabilities"
   value       = module.chaos_studio_capabilities.chaos_studio_capabilities_capability_type
