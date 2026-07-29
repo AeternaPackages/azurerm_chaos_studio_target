@@ -12,12 +12,12 @@ locals {
 }
 
 module "chaos_studio_targets" {
-  source               = "git::https://github.com/AeternaModules/azurerm_chaos_studio_target.git?ref=v4.81.0"
+  source               = "git::https://github.com/AeternaModules/azurerm_chaos_studio_target.git?ref=v5.0.0"
   chaos_studio_targets = local.chaos_studio_targets
 }
 
 module "chaos_studio_capabilities" {
-  source                    = "git::https://github.com/AeternaModules/azurerm_chaos_studio_capability.git?ref=v4.81.0"
+  source                    = "git::https://github.com/AeternaModules/azurerm_chaos_studio_capability.git?ref=v5.0.0"
   chaos_studio_capabilities = local.chaos_studio_capabilities
   depends_on                = [module.chaos_studio_targets]
 }
